@@ -1,0 +1,14 @@
+This Splunk App adds the following objects to help working with OpenDS log data
+
+* sourcetype: opends-audit
+Custom parsing and timestamp extraction
+
+* sourcetype: opends-access
+Extracts the client_ip field from CONNECTION lines
+
+* transactions
+- connection - groups all operations from the same connection together using fields
+host,conn
+
+- operation  - groups corresponding request and response lines together using fields
+host,conn,op
